@@ -6,7 +6,7 @@
 /*   By: vquesnel <vquesnel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/18 13:22:30 by vquesnel          #+#    #+#             */
-/*   Updated: 2016/03/23 13:19:48 by vquesnel         ###   ########.fr       */
+/*   Updated: 2016/03/29 16:23:38 by vquesnel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@
 # define BUFF_SIZE 24
 # define MAX_FILES 256
 
-int		get_next_line(int fd, char **line);
+int		get_next_line(int const fd, char **line);
 
 #endif
