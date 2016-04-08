@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vquesnel <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/03/23 11:34:11 by vquesnel          #+#    #+#              #
-#*   Updated: 2016/03/23 11:34:13 by vquesnel         ###   ########.fr       *#
+#    Created: 2016/03/19 17:36:29 by vquesnel          #+#    #+#              #
+#*   Updated: 2016/03/29 16:26:40 by vquesnel         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,23 +72,25 @@ SRC =ft_atoi.c \
 	 ft_lstnew.c \
 	 ft_swap.c \
 	 ft_abs.c \
-	 ft_clear_tab.c
+	 ft_clear_tab.c \
 
-HEADER = ./
+HEADER = ./includes
 OBJ =  $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Werror -Wextra -c $(SRC) -I $(HEADER)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-	@echo "libft has been created"
+	@gcc -Wall -Werror -Wextra -c $(SRC) -I $(HEADER)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "\033[32;1m$(NAME) has been created\033[0m"
 
 clean:
-	rm -rf $(OBJ)
-
+	@rm -rf $(OBJ)
+	@echo "\033[37mall libft_files.o are deleted\033[0m"
 fclean: clean
-	rm -rf $(NAME)
-
+	@rm -rf $(NAME)
+	@echo "\033[31m$(NAME) is deleted\033[0m"
 re: fclean all
+
+.PHONY: all clean fclean re
