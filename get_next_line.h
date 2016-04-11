@@ -6,7 +6,7 @@
 /*   By: vquesnel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/10 18:40:16 by vquesnel          #+#    #+#             */
-/*   Updated: 2016/04/10 18:40:33 by vquesnel         ###   ########.fr       */
+/*   Updated: 2016/04/11 11:57:06 by vquesnel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <sys/uio.h>
 # include <fcntl.h>
 # include <sys/types.h>
-# define BUFF_SIZE 24
-# define MAX_FILES 10240
+# define BUFF_SIZE 42
+# define MAX_FILES 256
 
 int		get_next_line(int const fd, char **line);
 
