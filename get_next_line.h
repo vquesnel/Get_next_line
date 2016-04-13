@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vquesnel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vquesnel <vquesnel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/10 18:40:16 by vquesnel          #+#    #+#             */
-/*   Updated: 2016/04/11 11:57:06 by vquesnel         ###   ########.fr       */
+/*   Created: 2016/04/13 21:18:11 by vquesnel          #+#    #+#             */
+/*   Updated: 2016/04/13 21:18:25 by vquesnel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,16 @@
 # include <sys/uio.h>
 # include <fcntl.h>
 # include <sys/types.h>
-# define BUFF_SIZE 42
-# define MAX_FILES 256
+# define BUFF_SIZE 69
+# define EOL '\n'
 
-int		get_next_line(int const fd, char **line);
+typedef struct		s_line
+{
+	int				fd;
+	char			*line;
+	struct	s_line	*next;
+}					t_line;
+
+int					get_next_line(const int fd, char **line);
 
 #endif
