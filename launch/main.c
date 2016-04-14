@@ -6,7 +6,7 @@
 /*   By: vquesnel <vquesnel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/19 13:56:22 by vquesnel          #+#    #+#             */
-/*   Updated: 2016/04/14 12:41:49 by vquesnel         ###   ########.fr       */
+/*   Updated: 2016/04/14 12:54:57 by vquesnel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int		main(int ac, char **av)
 	while ((ret = get_next_line(fd, &line) > 0))
 	{
 		ft_putstr(line);
-		ft_putstr("\033[32;1m|---> \033[0m");
+		ft_putstr("\033[32;1m|---> \033[34;1m");
 		ft_putnbr(ret);
-		ft_putstr("\n");
+		ft_putstr("\n\033[0m");
 	}
-	ft_putstr("\n\n");
-	ft_putstr("\033[31;1mFINAL RET = [\033[0m");
+	ft_putstr("\n");
+	ft_putstr("\033[31;1mFINAL RET = [\033[34;1m");
 	ft_putnbr(ret);
 	ft_putstr("\033[31;1m]\n\n\033[0m");
 	return (0);
