@@ -6,7 +6,7 @@
 /*   By: vquesnel <vquesnel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/13 21:17:10 by vquesnel          #+#    #+#             */
-/*   Updated: 2016/04/13 21:17:42 by vquesnel         ###   ########.fr       */
+/*   Updated: 2016/04/14 09:33:26 by vquesnel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_line		*init_list(const int fd)
 	return (new);
 }
 
-void	add_elem(t_line *list, t_line *new)
+void		add_elem(t_line *list, t_line *new)
 {
 	while (list)
 	{
@@ -37,7 +37,7 @@ void	add_elem(t_line *list, t_line *new)
 	}
 }
 
-int		read_file(int fd, t_line *list)
+int			read_file(int fd, t_line *list)
 {
 	int		ret;
 	char	buf[BUFF_SIZE + 1];
@@ -104,7 +104,7 @@ int			get_next_line(int const fd, char **line)
 	while (tmp)
 	{
 		if (tmp->fd == fd)
-			break;
+			break ;
 		if (tmp->next == NULL)
 			add_elem(tmp, init_list(fd));
 		tmp = tmp->next;
