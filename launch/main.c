@@ -6,12 +6,11 @@
 /*   By: vquesnel <vquesnel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/19 13:56:22 by vquesnel          #+#    #+#             */
-/*   Updated: 2016/04/14 14:09:32 by vquesnel         ###   ########.fr       */
+/*   Updated: 2016/05/17 14:38:14 by vquesnel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdio.h>
 
 int		main(int ac, char **av)
 {
